@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+#outMessages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message, .myMessage{
+    background-color: black;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 6px;
+    min-width: 50%;
+    width: fit-content;
+    max-width: 70%;
+}
+
+.message h3, .myMessage h3 {
+    margin: 0;
+    padding: 0;
+    color: aquamarine;
+}
+
+.message span, .myMessage span {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.myMessage {
+    background-color: rgba(0, 0, 0, 0.7);
+    align-self: flex-end;
+}
+
+.myMessage h3 {
+    color: rgb(140, 0, 255);
+}
+
+.scrollable{
+    max-height: 600px;
+    height: 100vh;
+    max-width: 500px;
+    width: 100%;
+    background-color: rgb(102, 102, 102);
+    border: 2px solid black;
+    border-radius: 6px;
+    overflow-y: auto;
+}
+
+form{
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+textarea{
+    width: 100%;
+    height: 5rem;
+    resize: none;
+    border-radius: 6px;
+}
+
+button {
+    padding: 6px 24px;
+    cursor: pointer;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+}
