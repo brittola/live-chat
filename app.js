@@ -17,7 +17,7 @@ const io = socketIO(server);
 
 io.on('connection', (socket) => {
 
-    socket.emit('update_msgs', messages);
+    socket.emit('update_msgs', messages[messages.length - 1]);
 
     socket.on('new_msg', (data) => {
         messages.push(data);
