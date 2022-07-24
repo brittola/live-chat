@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
 }
 
 body{
@@ -30,11 +33,13 @@ body{
     margin: 0;
     padding: 0;
     color: aquamarine;
+    font-size: 1.1rem;
 }
 
 .message span, .myMessage span {
     width: 100%;
     overflow-wrap: break-word;
+    font-size: 0.9rem;
 }
 
 .myMessage {
