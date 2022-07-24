@@ -13,7 +13,7 @@ do {
 
 const token = Math.ceil(Math.random() * 1000000);
 
-const socket = io('http://localhost:3000');
+const socket = io('https://brittola-xet.herokuapp.com/');
 
 socket.on('update_msgs', (messages) => {
 
