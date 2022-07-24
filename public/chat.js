@@ -15,25 +15,21 @@ const token = Math.ceil(Math.random() * 1000000);
 
 const socket = io('https://brittola-xet.herokuapp.com/');
 
-socket.on('update_msgs', (messages) => {
+socket.on('update_msgs', (message) => {
 
-    renderMessages(messages);
+    renderMessages(message);
 
 });
 
-function renderMessages(messages) {
+function renderMessages(message) {
 
-    outMessages.innerHTML = '';
+    const className = message.token == token ? 'myMessage' : 'message';
 
-    messages.forEach(message => {
-        const className = message.token == token ? 'myMessage' : 'message';
-
-        outMessages.innerHTML +=
-            `<div class="${className}">
-                <h3>${message.user}</h3>
-                <span>${message.msg}</span>
-            </div>`;
-    });
+    outMessages.innerHTML +=
+        `<div class="${className}">
+            <h3>${message.user}</h3>
+            <span>${message.msg}</span>
+        </div>`;
 
     chatBottom.scrollIntoView();
 }
